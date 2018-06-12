@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Canvas fx:id="canvas" height="400.0" width="400.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin></Canvas>
+      <HBox prefHeight="140.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="start" mnemonicParsing="false" onAction="#handleRunBtnAction" prefHeight="20.0" prefWidth="100.0" text="Start" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Button>
+            <Button fx:id="stop" mnemonicParsing="false" onAction="#handleStopBtnAction" prefHeight="20.0" prefWidth="100.0" text="Stop" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="-100.0" top="30.0" />
+               </HBox.margin></Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj wartość: ">
+               <HBox.margin>
+                  <Insets left="50.0" top="5.0" />
+               </HBox.margin></Text>
+            <TextField fx:id="point" prefHeight="10.0" prefWidth="120.0">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></TextField>
+            <Label fx:id="result" prefHeight="27.0" prefWidth="155.0" text="Wynik: ">
+               <HBox.margin>
+                  <Insets left="-155.0" top="30.0" />
+               </HBox.margin></Label>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="490.0" progress="0.0" styleClass="red">
+         <VBox.margin>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <HBox.margin>
+            <Insets right="5.0" />
+         </HBox.margin></ProgressBar>
+   </children>
+   <HBox.margin>
+      <Insets left="40.0" top="10.0" />
+   </HBox.margin>
+</VBox>
